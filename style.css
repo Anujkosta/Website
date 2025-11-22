@@ -164,7 +164,7 @@ header {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--light-bg) 0%, #fff5f3 100%);
-    padding: 100px 0;
+    padding: 40px 0;
     position: relative;
     overflow: hidden;
 }
@@ -175,7 +175,7 @@ header {
     top: -50%;
     right: -10%;
     width: 500px;
-    height: 500px;
+    height: 450px;
     background: var(--accent-color);
     border-radius: 50%;
     z-index: 0;
@@ -749,4 +749,14 @@ footer {
     .cta h2 {
         font-size: 32px;
     }
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;  /* keeps same color */
+}
+html {
+    scroll-behavior: smooth;
 }
