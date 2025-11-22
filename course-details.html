@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classical Mechanics | The Physics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html#home" class="logo-link">
+                        <i class="fas fa-atom"></i>
+                        <span>The Physics</span>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                     <li class="mobile-btn"><a href="index.html#contact">Get In Touch</a></li>
+                </ul>
+                <div class="headerButtons">
+                    <a href="index.html#contact" class="btn-primary">Get In Touch</a>
+                    <a href="index.html#home" class="btn-secondary">Login</a>
+                </div>
+                <div class="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-header-banner">
+            <div class="container">
+                <div class="banner-content">
+                    <span class="category-tag">Physics</span>
+                    <h1>Classical Mechanics</h1>
+                    <div class="course-stats">
+                        <span><i class="fas fa-star"></i> 4.8 Rating</span>
+                        <span><i class="fas fa-user-graduate"></i> 2.5K Enrolled</span>
+                        <span><i class="fas fa-clock"></i> 12 Weeks</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-details-section">
+            <div class="container">
+                <div class="course-layout-grid">
+                    
+                    <div class="course-main-content">
+                        <div class="content-box">
+                            <h2>Course Overview</h2>
+                            <p>In this comprehensive course, we cover kinematics, Newton’s laws, work and energy, momentum, rotational motion, and gravitation. Designed for both high school students and engineering aspirants, this course builds conceptual clarity through visual simulations and exam-focused problem solving.</p>
+                            
+                            <h3>What you'll learn</h3>
+                            <ul class="learning-list">
+                                <li><i class="fas fa-check-circle"></i> Newton's Laws of Motion & Applications</li>
+                                <li><i class="fas fa-check-circle"></i> Conservation of Energy & Momentum</li>
+                                <li><i class="fas fa-check-circle"></i> Rotational Dynamics & Gravitation</li>
+                                <li><i class="fas fa-check-circle"></i> Simple Harmonic Motion</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-box">
+                            <h2>Assignment Submission</h2>
+                            <p>Upload your practice sheets or doubt queries here.</p>
+                            
+                            <div class="upload-zone">
+                                <input type="file" id="fileInput" multiple class="file-input-hidden">
+                                <label for="fileInput" class="upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Click to browse or drag files here</span>
+                                    <small>Supports PDF, JPG, MP4 (Max 10MB)</small>
+                                </label>
+                                <div id="fileList" class="file-list-display"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-sidebar">
+                        <div class="sidebar-card">
+                            <div class="price-tag">
+                                <span class="current-price">₹2,999</span>
+                                <span class="original-price">₹4,999</span>
+                            </div>
+                            <p class="discount-text">40% Off for limited time</p>
+                            
+                            <a href="#" class="btn-primary full-width-btn">Enroll Now</a>
+                            <a href="#" class="btn-secondary full-width-btn">Download Brochure</a>
+
+                            <div class="sidebar-features">
+                                <div class="sf-item"><i class="fas fa-video"></i> 40+ Hours Video</div>
+                                <div class="sf-item"><i class="fas fa-file-alt"></i> 15 Assignments</div>
+                                <div class="sf-item"><i class="fas fa-certificate"></i> Certificate of Completion</div>
+                                <div class="sf-item"><i class="fas fa-mobile-alt"></i> Mobile Access</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Physics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple script to show selected file name
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
+
+        if(fileInput) {
+            fileInput.addEventListener('change', (e) => {
+                fileList.innerHTML = '';
+                [...e.target.files].forEach(file => {
+                    const div = document.createElement('div');
+                    div.innerHTML = `<i class="fas fa-file"></i> ${file.name}`;
+                    div.style.marginTop = '10px';
+                    div.style.fontSize = '14px';
+                    div.style.color = '#555';
+                    fileList.appendChild(div);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
